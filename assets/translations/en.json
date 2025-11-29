@@ -1,0 +1,70 @@
+{
+  "app": {
+    "title": "AQI NCR Delhi",
+    "description": "Air Quality Monitoring System",
+    "tagline": "Protecting Delhi's Air, Protecting Our Future"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "name": "Full Name",
+    "mobile": "Mobile Number",
+    "location": "Location",
+    "role": "Login As"
+  },
+  "dashboard": {
+    "citizen": "Citizen Dashboard",
+    "policymaker": "Policymaker Dashboard",
+    "department": "Department Dashboard",
+    "welcome": "Welcome",
+    "liveData": "Live Data"
+  },
+  "aqi": {
+    "current": "Current AQI",
+    "forecast": "AQI Forecast",
+    "good": "Good",
+    "satisfactory": "Satisfactory",
+    "moderate": "Moderate",
+    "poor": "Poor",
+    "veryPoor": "Very Poor",
+    "severe": "Severe"
+  },
+  "pollutants": {
+    "pm25": "PM2.5",
+    "pm10": "PM10",
+    "no2": "NO2",
+    "o3": "O3",
+    "so2": "SO2",
+    "co": "CO"
+  },
+  "health": {
+    "recommendations": "Health Recommendations",
+    "breathing": "Breathing Exercises",
+    "assessment": "Health Assessment",
+    "alerts": "Health Alerts"
+  },
+  "complaints": {
+    "submit": "Submit Complaint",
+    "tracking": "Complaint Tracking",
+    "type": "Complaint Type",
+    "priority": "Priority Level",
+    "status": "Status",
+    "description": "Description",
+    "photos": "Photo Evidence"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning"
+  }
+}
