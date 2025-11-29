@@ -1,0 +1,686 @@
+:root {
+    --saffron: #FF9933;
+    --white: #FFFFFF;
+    --green: #138808;
+    --blue: #000080;
+    --light-blue: #E3F2FD;
+    --dark-gray: #2C3E50;
+    --gray: #7F8C8D;
+    --light-gray: #ECF0F1;
+}
+
+/* Landing Page Styles */
+.landing-page {
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 50%, #E8F5E8 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-section {
+    padding-top: 80px;
+    background: url('../assets/images/delhi-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 153, 51, 0.1) 0%, rgba(19, 136, 8, 0.1) 100%);
+}
+
+.hero-visual {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aqi-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #00E400 0%, #FFFF00 25%, #FF7E00 50%, #FF0000 75%, #99004C 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.aqi-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.aqi-status {
+    font-size: 1.2rem;
+}
+
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.floating-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: float 6s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+.floating-icon:nth-child(1) { top: 10%; left: 20%; color: var(--saffron); }
+.floating-icon:nth-child(2) { top: 20%; right: 15%; color: var(--green); }
+.floating-icon:nth-child(3) { bottom: 30%; left: 10%; color: var(--blue); }
+.floating-icon:nth-child(4) { bottom: 15%; right: 25%; color: var(--saffron); }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+.features-section {
+    background: white;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1rem;
+    color: white;
+}
+
+.feature-icon.citizen { background: linear-gradient(135deg, var(--saffron), #FFB366); }
+.feature-icon.policymaker { background: linear-gradient(135deg, var(--green), #34C759); }
+.feature-icon.department { background: linear-gradient(135deg, var(--blue), #4A6FDC); }
+
+.feature-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.feature-card li {
+    padding: 0.3rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.feature-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: bold;
+}
+
+/* Login Page Styles */
+.login-page {
+    background: linear-gradient(135deg, var(--saffron) 0%, var(--white) 50%, var(--green) 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.brand-section {
+    background: linear-gradient(135deg, rgba(255, 153, 51, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(19, 136, 8, 0.9) 100%);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.brand-content {
+    text-align: center;
+    color: var(--dark-gray);
+}
+
+.indian-flag {
+    width: 120px;
+    height: 80px;
+    border: 2px solid #333;
+    margin: 0 auto 2rem;
+    position: relative;
+}
+
+.saffron, .white, .green {
+    height: 33.33%;
+}
+
+.saffron { background: var(--saffron); }
+.white { 
+    background: var(--white);
+    position: relative;
+}
+.green { background: var(--green); }
+
+.ashoka-chakra {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+}
+
+.ashoka-chakra::before {
+    content: '☸';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--blue);
+    font-size: 12px;
+}
+
+.brand-tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--dark-gray);
+}
+
+.feature-list {
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: rgba(255,255,255,0.5);
+    border-radius: 8px;
+}
+
+.feature-item i {
+    width: 30px;
+    color: var(--saffron);
+    font-size: 1.2rem;
+}
+
+.login-form-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: 2rem;
+}
+
+.login-title {
+    color: var(--dark-gray);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.demo-credentials {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+/* Dashboard Styles */
+.dashboard-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--light-gray);
+}
+
+.sidebar {
+    width: 280px;
+    background: linear-gradient(180deg, var(--saffron) 0%, var(--white) 50%, var(--green) 100%);
+    position: fixed;
+    height: 100vh;
+    transition: all 0.3s;
+    z-index: 1000;
+    box-shadow: 3px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: between;
+    align-items: center;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    color: var(--dark-gray);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.user-info {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin: 0.2rem 1rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    color: var(--dark-gray);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-item.active .nav-link {
+    background: rgba(255,255,255,0.3);
+    color: var(--blue);
+}
+
+.nav-link i {
+    width: 20px;
+    margin-right: 0.8rem;
+}
+
+.content {
+    margin-left: 280px;
+    transition: all 0.3s;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 3px solid var(--saffron);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    background: var(--green);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.notification-bell {
+    position: relative;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--saffron);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content {
+    padding: 2rem;
+}
+
+/* AQI Banner */
+.aqi-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.aqi-main {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.aqi-circle-large {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #00E400 0%, #FFFF00 25%, #FF7E00 50%, #FF0000 75%, #99004C 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.aqi-breakdown {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.pollutant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+/* Weather Grid */
+.weather-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.weather-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--light-gray);
+    border-radius: 8px;
+}
+
+.weather-item i {
+    font-size: 1.5rem;
+    color: var(--blue);
+}
+
+.weather-item .label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.weather-item .value {
+    display: block;
+    font-weight: bold;
+    color: var(--dark-gray);
+}
+
+/* Health Alert */
+.health-alert {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.health-recommendations {
+    list-style: none;
+    padding: 0;
+}
+
+.health-recommendations li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activity-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+/* Chatbot Styles */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--saffron), var(--green));
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-widget {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+    border: 2px solid var(--saffron);
+}
+
+.chatbot-widget.active {
+    display: flex;
+}
+
+.chatbot-header {
+    background: linear-gradient(135deg, var(--saffron), var(--green));
+    color: white;
+    padding: 1rem;
+    border-radius: 13px 13px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background: var(--light-gray);
+}
+
+.message {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.message-content {
+    max-width: 80%;
+    padding: 0.8rem 1rem;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.bot-message .message-content {
+    background: linear-gradient(135deg, var(--saffron), #FFB366);
+    color: white;
+}
+
+.chatbot-input {
+    padding: 1rem;
+    border-top: 1px solid var(--light-gray);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chatbot-input input {
+    flex: 1;
+    border: 1px solid var(--light-gray);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    outline: none;
+}
+
+.chatbot-input button {
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .content {
+        margin-left: 0;
+    }
+    
+    .aqi-main {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .aqi-breakdown {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chatbot-widget {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}
